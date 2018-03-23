@@ -16,6 +16,10 @@
 
 			$this->conn = $db->connect();
 
+			if($this->conn) {
+				echo "connection established";
+			}
+
 			//$this->name = $name;
 		}
 
@@ -23,6 +27,9 @@
 
 
 	}
+
+
+$op = new DBOperation();
 
 
 
