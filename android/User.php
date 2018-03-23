@@ -3,7 +3,7 @@
 	/**
 	* 
 	*/
-	class DBOperation
+	class User
 	{
 		
 		private $conn;
@@ -34,8 +34,8 @@
 	}
 
 
-$op = new DBOperation();
-$op->createUserAccount('Atiq Ahammed', 'bsse0817@iit.du.ac.bd', '123456', '0');
+//$op = new DBOperation();
+//$op->createUserAccount('Atiq Ahammed', 'bsse0817@iit.du.ac.bd', '123456', '0');
 
 
 

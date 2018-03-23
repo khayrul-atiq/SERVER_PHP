@@ -1,7 +1,12 @@
 <?php
-function writeMsg() {
-    echo "Hello world!";
+
+$atiq = 'atiq';
+
+writeMsg($atiq);
+
+function writeMsg($atiq) {
+    echo "Hello, ".$atiq;
 }
 
-writeMsg(); // call the function
+ // call the function
 ?>
