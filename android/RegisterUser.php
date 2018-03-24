@@ -4,8 +4,9 @@
 	require_once('User.php');
 	$response = array();
 
-	if($_SERVET['REQUEST_METHOD'] == 'POST') {
+	if($_SERVER['REQUEST_METHOD'] == 'POST') {
 		storeUserInformation($response);
+		sendConfirmationMail();
 	} else {
 		invalidRequestMethod($response);
 	}
@@ -14,7 +15,15 @@
 
 
 
-	
+	function sendConfirmationMail() {
+		require_once('../mail/MyEmail.php');
+		$mail = new MyEmail();
+		$email = array();
+		$email['sub'] = 'Registration Completed';
+		$email['body'] = 'Hello '.$_POST['name'].',<br> Welcome to complain box';
+		$email['to'] = $_POST['email'];
+		$mail->sendEmail($email);
+	}
 
 	function invalidRequestMethod($response) {
 		$response['error'] = true;

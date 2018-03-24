@@ -25,13 +25,12 @@ class MyEmail
 
     	$mail->Subject = $email['sub'];
     	$mail->Body = $email['body'];
-    	//$mail->AddAddress = $email['to'];
     	$mail->AddAddress($email['to']);
 
      	if(!$mail->Send()) {
-        	echo "Mailer Error: " . $mail->ErrorInfo;
+        	//echo "Mailer Error: " . $mail->ErrorInfo;
     	} else {
-        	echo 'send succefully';
+        	//echo 'send succefully';
         	//header("location: index.php");
     	}
 	}

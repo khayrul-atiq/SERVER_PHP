@@ -1,6 +1,6 @@
 <?php  
 	
-	require_once('MyEmail.php');
+	require_once('../mail/MyEmail.php');
 	//require_once('User.php');
 
 	$mail = new MyEmail();
